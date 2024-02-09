@@ -26,3 +26,10 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+Solution -
+In the lecture, the recurrence relation for a simple mergesort (splitting into two subarrays) is T(n) = 2T(n/2) + n. 
+Using this information, we can see that the recurrence relation for the mergesort splitting into three subarrays is T(n) = 3T(n/3) + n.
+Using substitution, we can calculate the solution to be (3^i) * T * (n / (3^i)) + (i * n).
+In this case, i is equal to log_3(n).
+Further simplification proves that this is equivilent to $/Theta$ (n log n).
